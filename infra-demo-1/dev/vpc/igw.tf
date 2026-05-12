@@ -4,6 +4,8 @@ resource "aws_internet_gateway" "codecirrus_dev_igw" {
   tags = {
     Name        = "codecirrus-dev-igw"
     Environment = "dev"
+    ManagedBy   = "iac-agent"
+    Owner       = "furqan"
   }
-  depends_on = [ aws_vpc.codecirrus_dev, aws_subnet.public_subnet_1, aws_subnet.public_subnet_2 ]
+  depends_on = [aws_vpc.codecirrus_dev, aws_subnet.public_subnet_1, aws_subnet.public_subnet_2]
 }
