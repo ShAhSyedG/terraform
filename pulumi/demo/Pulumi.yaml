@@ -1,0 +1,3 @@
+name: pulumi-demo
+runtime: python
+description: Provisions a simple S3 bucket with versioning enabled
